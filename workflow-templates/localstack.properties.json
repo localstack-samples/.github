@@ -1,0 +1,7 @@
+{
+  "name": "LocalStack sample CI",
+  "description": "Start LocalStack with lstk, deploy the sample and run its tests on every pull request.",
+  "iconName": "localstack",
+  "categories": ["Continuous integration", "Testing"],
+  "filePatterns": ["^Makefile$"]
+}

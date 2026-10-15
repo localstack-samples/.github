@@ -1,0 +1,40 @@
+name: Sample request
+description: Suggest a new sample, or an improvement to an existing one
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea! Please check the [docs' sample apps](https://docs.localstack.cloud/applications/) and the [existing repositories](https://github.com/orgs/localstack-samples/repositories) first.
+  - type: textarea
+    attributes:
+      label: What should the sample show?
+      description: The use case or architecture, and what someone should learn from it.
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Services
+      description: The AWS, Snowflake or Azure services it should use.
+      placeholder: e.g. API Gateway, Lambda, DynamoDB
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Deployment tool
+      multiple: true
+      options:
+        - AWS CLI or scripts
+        - AWS CDK
+        - AWS SAM
+        - CloudFormation
+        - Terraform or OpenTofu
+        - Pulumi
+        - Serverless Framework
+        - Azure CLI or Bicep
+        - Snowflake CLI, dbt or Snowpark
+        - No preference
+  - type: textarea
+    attributes:
+      label: Anything else?
+      description: Links to blog posts, AWS samples, or a repository it could be based on.
