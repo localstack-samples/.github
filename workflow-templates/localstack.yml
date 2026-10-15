@@ -29,9 +29,8 @@ jobs:
       # actions/setup-node, actions/setup-python or hashicorp/setup-terraform.
 
       - name: Install lstk
-        # Pinned so a new release cannot change every run at once: bump it deliberately
         run: |
-          npm install -g @localstack/lstk@1.4.0
+          npm install -g @localstack/lstk
           # Point the AWS CLI at LocalStack. Remove this line for Snowflake or Azure samples.
           lstk setup aws --force --non-interactive
 
