@@ -1,0 +1,51 @@
+# Deploys the sample to LocalStack and runs its tests on every pull request and push.
+# Needs a LOCALSTACK_AUTH_TOKEN repository secret: https://app.localstack.cloud/workspace/auth-tokens
+name: Test on LocalStack
+
+on:
+  push:
+    branches: [ $default-branch ]
+    paths-ignore:
+      - '**.md'
+  pull_request:
+    branches: [ $default-branch ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Deploy and test on LocalStack
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      # Add the setup steps your sample needs here, for example
+      # actions/setup-node, actions/setup-python or hashicorp/setup-terraform.
+
+      - name: Install lstk
+        run: |
+          npm install -g @localstack/lstk
+          # Point the AWS CLI at LocalStack. Remove this line for Snowflake or Azure samples.
+          lstk setup aws --force --non-interactive
+
+      - name: Start LocalStack
+        env:
+          LOCALSTACK_AUTH_TOKEN: ${{ secrets.LOCALSTACK_AUTH_TOKEN }}
+        # Use `--type snowflake` or `--type azure` for the other emulators
+        run: lstk start --non-interactive
+
+      - name: Deploy the sample
+        run: make deploy
+
+      - name: Test the sample
+        run: make test
+
+      - name: Show LocalStack logs
+        if: failure()
+        run: lstk logs --tail 300
