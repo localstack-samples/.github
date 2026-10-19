@@ -10,7 +10,7 @@ Open issues in the repository of the sample they are about, and search its exist
 
 - **A sample does not deploy, or its test fails:** use the **Sample bug report** form. Include how you started LocalStack, the LocalStack version, the commands you ran and the error output.
 - **You would like a new sample:** use the **Sample request** form and describe the scenario and the services it should cover.
-- **LocalStack itself behaves differently from the cloud provider**, for example an API returns the wrong result: report it in [localstack/localstack](https://github.com/localstack/localstack/issues) instead, with the sample as a reproduction.
+- **LocalStack itself behaves differently from the cloud provider**, for example an API returns the wrong result: [start a discussion](https://github.com/orgs/localstack/discussions) in the LocalStack community instead, with the sample as a reproduction.
 - **Questions and help:** ask in the [LocalStack Community Slack](https://localstack.cloud/slack).
 
 ## Pull requests

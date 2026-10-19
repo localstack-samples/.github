@@ -1,0 +1,61 @@
+name: Update STATUS.md
+
+on:
+  schedule:
+    # Mondays at 06:00 UTC
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - scripts/generate_status.py
+      - status.toml
+      - .github/workflows/status.yml
+  # Pull requests only check that the generator runs; nothing is committed
+  pull_request:
+    paths:
+      - scripts/generate_status.py
+      - status.toml
+      - .github/workflows/status.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: status-md-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  update:
+    name: Generate STATUS.md
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate STATUS.md
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python scripts/generate_status.py
+
+      - name: Show the changes
+        run: git diff --stat -- STATUS.md
+
+      - name: Commit STATUS.md
+        if: github.event_name != 'pull_request'
+        run: |
+          git add STATUS.md
+          if git diff --cached --quiet; then
+            echo "STATUS.md is up to date"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update STATUS.md"
+          git push

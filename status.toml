@@ -1,0 +1,12 @@
+# Overrides for scripts/generate_status.py, which writes STATUS.md
+
+# Repositories left out of STATUS.md
+exclude = [".github"]
+
+# Section for a repository that the name and topic rules place in the wrong one, e.g.
+# my-repo = "LocalStack features"
+[area]
+
+# Workflow file that gets the badge, for a repository whose main test workflow the rules do not pick
+[workflow]
+sample-serverless-quiz-app = "integration-test.yml"
