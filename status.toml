@@ -6,6 +6,7 @@ exclude = [".github"]
 # Section for a repository that the name and topic rules place in the wrong one, e.g.
 # my-repo = "LocalStack features"
 [area]
+localstack-on-eks = "Kubernetes"
 
 # Workflow file that gets the badge, for a repository whose main test workflow the rules do not pick
 [workflow]
