@@ -1,8 +1,8 @@
 blank_issues_enabled: true
 contact_links:
   - name: Bug in LocalStack itself
-    url: https://github.com/localstack/localstack/issues
-    about: An API or service behaves differently from the cloud provider? Report it to LocalStack.
+    url: https://github.com/orgs/localstack/discussions
+    about: An API or service behaves differently from the cloud provider? Start a discussion in the LocalStack community.
   - name: LocalStack Community Slack
     url: https://localstack.cloud/slack
     about: Ask questions and get help running a sample.

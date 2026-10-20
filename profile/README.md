@@ -33,10 +33,10 @@ Sample applications that run on [LocalStack](https://localstack.cloud), the loca
 
 3. Clone a sample and follow its README to deploy and test it.
 
-Browse [all repositories](https://github.com/orgs/localstack-samples/repositories), or find samples by service in the [docs](https://docs.localstack.cloud/applications/).
+Browse [all repositories](https://github.com/orgs/localstack-samples/repositories), check the [CI status of every sample](https://github.com/localstack-samples/.github/blob/main/STATUS.md), or find samples by service in the [docs](https://docs.localstack.cloud/applications/).
 
 ## Contributing
 
 Found a broken sample or want a new one? [Open an issue](https://github.com/localstack-samples/.github/blob/main/CONTRIBUTING.md#issues) in the sample's repository, or read the [contributing guide](https://github.com/localstack-samples/.github/blob/main/CONTRIBUTING.md) to add your own. Everyone taking part is expected to follow our [Code of Conduct](https://github.com/localstack-samples/.github/blob/main/CODE_OF_CONDUCT.md).
 
-Bugs in LocalStack itself belong in [localstack/localstack](https://github.com/localstack/localstack/issues). For questions, join the [LocalStack Community Slack](https://localstack.cloud/slack).
+Found a bug in LocalStack itself? [Start a discussion](https://github.com/orgs/localstack/discussions) in the LocalStack community. For questions, join the [LocalStack Community Slack](https://localstack.cloud/slack).
