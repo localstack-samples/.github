@@ -20,6 +20,7 @@ This is the status of the public sample applications in the [localstack-samples]
 | [kirocrew-demo](https://github.com/localstack-samples/kirocrew-demo) | A simple demo showing how to automate a local test using KiroCrew and LocalStack | No CI |
 | [lambda-sam-authorizer](https://github.com/localstack-samples/lambda-sam-authorizer) | AWS Serverless Application Model (SAM) with LocalStack Lambda and Authorizer | [![CI](https://img.shields.io/github/actions/workflow/status/localstack-samples/lambda-sam-authorizer/main.yml?branch=main&label=CI)](https://github.com/localstack-samples/lambda-sam-authorizer/actions/workflows/main.yml) |
 | [local-testing-ses-emails-mailhog](https://github.com/localstack-samples/local-testing-ses-emails-mailhog) | Local Testing of SES Workflows Using LocalStack & MailHog Extension | [![CI](https://img.shields.io/github/actions/workflow/status/localstack-samples/local-testing-ses-emails-mailhog/ci.yml?branch=main&label=CI)](https://github.com/localstack-samples/local-testing-ses-emails-mailhog/actions/workflows/ci.yml) |
+| [localstack-app-emulators](https://github.com/localstack-samples/localstack-app-emulators) | Demo repo for LocalStack application emulators | No CI |
 | [localstack-aws-samples](https://github.com/localstack-samples/localstack-aws-samples) | Next iteration of localstack-pro-samples with IaC deployments and tested by LocalStack | [![CI](https://img.shields.io/github/actions/workflow/status/localstack-samples/localstack-aws-samples/test.yml?branch=main&label=CI)](https://github.com/localstack-samples/localstack-aws-samples/actions/workflows/test.yml) |
 | [localstack-demo](https://github.com/localstack-samples/localstack-demo) | Simple demo application deployed using LocalStack | [![CI](https://img.shields.io/github/actions/workflow/status/localstack-samples/localstack-demo/integration-test.yml?branch=master&label=CI)](https://github.com/localstack-samples/localstack-demo/actions/workflows/integration-test.yml) |
 | [localstack-k8s-demo](https://github.com/localstack-samples/localstack-k8s-demo) | LocalStack running in Kubernetes, with a Lambda function querying a MySQL database, deployed with Terraform | [![CI](https://img.shields.io/github/actions/workflow/status/localstack-samples/localstack-k8s-demo/main.yml?branch=main&label=CI)](https://github.com/localstack-samples/localstack-k8s-demo/actions/workflows/main.yml) |
@@ -84,7 +85,7 @@ This is the status of the public sample applications in the [localstack-samples]
 
 | Sample | Description | CI |
 |---|---|---|
-| [aks-samples](https://github.com/localstack-samples/aks-samples) | This repository contains samples and tutorials for Azure Kubernetes Service (AKS) in LocalStack emulator for Azure. | [![CI](https://img.shields.io/github/actions/workflow/status/localstack-samples/aks-samples/samples.yml?branch=main&label=CI)](https://github.com/localstack-samples/aks-samples/actions/workflows/samples.yml) |
+| [aks-samples](https://github.com/localstack-samples/aks-samples) | This repository contains samples and tutorials for Azure Kubernetes Service (AKS) in LocalStack emulator for Azure. | [![CI](https://img.shields.io/github/actions/workflow/status/localstack-samples/aks-samples/run-samples.yml?branch=main&label=CI)](https://github.com/localstack-samples/aks-samples/actions/workflows/run-samples.yml) |
 
 ## Kubernetes
 
